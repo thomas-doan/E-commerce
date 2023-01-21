@@ -1,0 +1,40 @@
+<main>
+  <section>
+    <table>
+      <thead>
+        <tr class="colorbg-1">
+          <th></th>
+          <th>Nom</th>
+          <th>Description</th>
+          <th>prix</th>
+          <th>Image</th>
+          <th>Catégorie</th>
+          <th>Date Création</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let product of productList">
+          <td>{{ product.id_product }}</td>
+          <td>{{ product.name }}</td>
+          <td>{{ product.description }}</td>
+          <td>{{ product.price }}</td>
+          <td><img src="{{ product.image }}" alt="image du produit" /></td>
+
+          <ng-container *ngFor="let category of categoryList">
+            <td *ngIf="category.id == product.CategoryId">
+              {{ category.category }}
+            </td>
+          </ng-container>
+
+          <td>{{ product.createdAt | date : "d/M/yy" }}</td>
+          <td>
+            <button [routerLink]="['edit', product.id_product]">Edit</button>
+          </td>
+          <td><button (click)="delete(product.id_product)">Delete</button></td>
+          <!-- <td><a [routerLink]="['delete', product.id_product]">Delete</a> </td> -->
+        </tr>
+      </tbody>
+    </table>
+  </section>
+</main>

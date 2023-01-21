@@ -1,0 +1,33 @@
+.grid {
+  margin: 0.5rem;
+  max-width: 95vw;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 4fr));
+  gap: 1rem;
+}
+
+article {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.noProduct {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  h4 {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+  a {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    cursor: pointer;
+  }
+}
+
+span {
+  font-weight: bold;
+}

@@ -1,0 +1,24 @@
+FROM node:18.0
+
+WORKDIR /back
+
+COPY . .
+
+
+RUN npm install
+RUN npm i express cors   
+RUN npm install -g nodemon
+RUN npm i nodemon --save-dev
+RUN npm i dotenv
+RUN npm i sequelize mysql2
+RUN npm i bcrypt
+RUN npm rebuild bcrypt --build-from-source
+RUN npm i jsonwebtoken
+RUN npm i express multer
+RUN npm install --save-dev sequelize-cli
+
+ENV PATH=$PATH:/app/node_modules/.bin
+
+EXPOSE 3000
+
+CMD ["npm", "run", "dev"]

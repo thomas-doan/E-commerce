@@ -1,0 +1,9 @@
+<article>
+  <div class="container">
+    <section class="d-flex flex-justify-content-between">
+      <div *ngFor="let category of categoryList">
+        <app-single-cat [item]="category"></app-single-cat>
+      </div>
+    </section>
+  </div>
+</article>

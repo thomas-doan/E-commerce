@@ -1,0 +1,34 @@
+ul ul li {
+  padding-top: 0.2rem;
+  padding-bottom: 0.2rem;
+}
+
+ul ul a {
+  position: relative;
+}
+
+ul a:first-child {
+  font-weight: bold;
+}
+
+ul ul a:hover,
+ul li a:hover {
+  color: orange;
+  transition: color 1s;
+}
+
+ul ul a::after {
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  height: 1px;
+  width: 0;
+  background: orange;
+  z-index: 10;
+  transition: width 0.8s;
+}
+
+ul ul a:hover::after {
+  width: 100%;
+}

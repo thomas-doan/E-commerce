@@ -1,0 +1,114 @@
+<div class="container">
+  <section class="colorbg-2">
+    <article>
+      <form #f="ngForm" name="form" (ngSubmit)="f.form.valid && onSubmit()">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            [(ngModel)]="product.name"
+            #name="ngModel"
+            required
+            minlength="4"
+          />
+        </div>
+        <div class="form_error" *ngIf="name.errors && f.submitted">
+          <div *ngIf="name.errors['required']">name is required</div>
+          <div *ngIf="name.errors['minlength']">
+            name must be at least 4 charracters
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="description">Description</label>
+          <!--         <input
+          type="text"
+          id="description"
+          name="description"
+          [(ngModel)]="product.description"
+          #description="ngModel"
+          required
+          minlength="8"
+        /> -->
+
+          <textarea
+            cols="3"
+            rows="8"
+            id="description"
+            name="description"
+            [(ngModel)]="product.description"
+            #description="ngModel"
+            required
+            minlength="8"
+          ></textarea>
+        </div>
+        <div class="form_error" *ngIf="description.errors && f.submitted">
+          <div *ngIf="description.errors['required']">
+            description is required
+          </div>
+          <div *ngIf="description.errors['minlength']">
+            description must be at least 8 charracters
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="price">Price</label>
+          <input
+            type="number"
+            id="price"
+            name="price"
+            [(ngModel)]="product.price"
+            #price="ngModel"
+            required
+            min="1"
+            max="1000"
+          />
+        </div>
+        <div class="form_error" *ngIf="price.errors && f.submitted">
+          <div *ngIf="price.errors['required']">price is required !</div>
+          <div *ngIf="price.errors['min']">price must be at least 1$</div>
+          <div *ngIf="price.errors['min']">price must be at most 1000$</div>
+        </div>
+        <div class="form-group">
+          <label for="image">Image</label>
+          <input
+            type="file"
+            id="image"
+            name="image"
+            src="{{ product.image }}"
+            (change)="onChange($event)"
+            [(ngModel)]="product.image"
+            #image="ngModel"
+            required
+          />
+        </div>
+        <div class="form_error" *ngIf="image.errors && f.submitted">
+          image is required !
+        </div>
+
+        <label for="CategoryId">Categorie : </label>
+
+        <select
+          name="CategoryId"
+          id="CategoryId"
+          [(ngModel)]="product.CategoryId"
+          #category="ngModel"
+        >
+          <option
+            *ngFor="let category of categoryList"
+            value="{{ category.id }}"
+          >
+            {{ category.category }}
+          </option>
+        </select>
+
+        <div class="form_error" *ngIf="category.errors && f.submitted">
+          category is required !
+        </div>
+        <div class="form-group">
+          <button type="submit" class="colorbg-1 color-lg">Create</button>
+        </div>
+      </form>
+    </article>
+  </section>
+</div>

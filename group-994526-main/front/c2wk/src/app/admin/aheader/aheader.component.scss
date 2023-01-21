@@ -1,0 +1,30 @@
+nav {
+  margin-right: 2rem;
+  margin-left: 2rem;
+  padding: 2rem;
+
+  p {
+    cursor: pointer;
+    position: relative;
+  }
+}
+
+p:hover {
+  color: orange;
+}
+
+p::after {
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  height: 2px;
+  width: 0;
+  background: orange;
+  z-index: 10;
+  transition: width 0.8s;
+}
+
+p:hover::after {
+  width: 100%;
+}

@@ -1,0 +1,19 @@
+<div class="d-flex flex-justify-content-center mrem-3">
+
+<div class="container">
+  <div class="show_description">
+    <p>{{ productItem.name }}</p>
+    <p>En vente le : {{ productItem.createdAt | date : "d/M/yy" }}</p>
+    <p>Description du produit : {{ productItem.description }}</p>
+    <p>Prix : {{ productItem.price }} €</p>
+    <button>Acheter</button>
+  </div>
+
+  <div class="show_image">
+    <img src="{{ productItem.image }}" alt="" />
+  </div>
+</div>
+
+
+
+</div>

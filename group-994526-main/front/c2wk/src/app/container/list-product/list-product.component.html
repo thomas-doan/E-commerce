@@ -1,0 +1,9 @@
+<article>
+  <div class="grid">
+    <section class="grid">
+      <div *ngFor="let product of productList">
+        <app-single-product [productItem]="product"></app-single-product>
+      </div>
+    </section>
+  </div>
+</article>

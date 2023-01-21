@@ -1,0 +1,34 @@
+<header>
+  <nav>
+    <ul class="d-flex flex-justify-content-between color-lg">
+      <div class="d-flex flex-justify-content-between">
+        <li class="section2"><a [routerLink]="['home']">shareCTECH </a></li>
+
+        <li class="section2"><a [routerLink]="['products']">Produits</a></li>
+      </div>
+
+      <div class="d-flex flex-justify-content-between">
+        <div *ngIf="CheckisConnected()" class="section2">
+          <li><a [routerLink]="['dashboard_user']">Dashboard</a></li>
+        </div>
+        <div *ngIf="CheckisConnected()" class="section2">
+          <li><a [routerLink]="['profil']">Profil</a></li>
+        </div>
+        <div *ngIf="!CheckisConnected()" class="section2">
+          <li><a (click)="redirectionToRegister()">register</a></li>
+        </div>
+        <div *ngIf="!CheckisConnected()" class="section2">
+          <a (click)="redirectionToLogin()">Login</a>
+          <!-- <li><a [routerLink]="['auth/login']">log2</a></li> -->
+        </div>
+        <div *ngIf="CheckisAdmin()" class="section2">
+          <li><a [routerLink]="['admin']">Admin</a></li>
+        </div>
+
+        <div *ngIf="CheckisConnected()">
+          <a (click)="logout()">Logout</a>
+        </div>
+      </div>
+    </ul>
+  </nav>
+</header>

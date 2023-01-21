@@ -1,0 +1,63 @@
+<section class="colorbg-3">
+  <article>
+    <form #f="ngForm" name="form" (ngSubmit)="f.form.valid && onSubmit()">
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          [(ngModel)]="product.name"
+          #name="ngModel"
+        />
+      </div>
+      <div class="form-group">
+        <label for="description">Description</label>
+        <input
+          type="text"
+          id="description"
+          name="description"
+          [(ngModel)]="product.description"
+          #description="ngModel"
+        />
+      </div>
+      <div class="form-group">
+        <label for="price">Price</label>
+        <input
+          type="number"
+          id="price"
+          name="price"
+          [(ngModel)]="product.price"
+          #price="ngModel"
+        />
+      </div>
+      <div class="form-group">
+        <label for="image">Image</label>
+        <input
+          type="file"
+          id="image"
+          name="image"
+          (change)="onChange($event)"
+          (upload)="(onUpload)"
+          [(ngModel)]="product.image"
+          #image="ngModel"
+        />
+      </div>
+      <label for="CategoryId">Categorie : </label>
+
+      <select
+        name="CategoryId"
+        id="CategoryId"
+        [(ngModel)]="product.CategoryId"
+        #category="ngModel"
+      >
+        <option *ngFor="let category of categoryList" value="{{ category.id }}">
+          {{ category.category }}
+        </option>
+      </select>
+      <div class="form-group">
+        <button type="submit" class="colorbg-1 color-lg">Edit</button>
+      </div>
+    </form>
+  </article>
+</section>

@@ -1,0 +1,71 @@
+/* video {
+  pointer-events: none;
+  width: 99vw;
+} */
+
+video {
+  width: 100vw;
+  height: 700px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 5px;
+}
+
+.bg-overlay {
+  display: flex;
+  justify-content: center;
+  opacity: 0.6;
+}
+
+section {
+  display: flex;
+  justify-content: center;
+}
+
+.bg-overlay {
+  position: relative;
+  z-index: 0;
+}
+
+.info-compagny {
+  position: absolute;
+  z-index: 1;
+  top: 20rem;
+  left: 10rem;
+}
+.toto {
+  font-size: 2rem;
+  color: white;
+  font-weight: bold;
+}
+
+span {
+  font-weight: bold;
+}
+
+.philosophie {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  width: 80%;
+}
+
+.text-philo {
+  width: 100%;
+}
+
+.text-philo div {
+  width: 70%;
+  height: 100%;
+}
+
+.text-philo p {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}

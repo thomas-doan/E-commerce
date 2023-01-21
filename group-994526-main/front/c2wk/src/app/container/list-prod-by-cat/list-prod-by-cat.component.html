@@ -1,0 +1,27 @@
+<article>
+  <div class="grid">
+    <section class="grid">
+      <ng-container
+        *ngIf="productListByCat.length; then productList; else noData"
+      >
+      </ng-container>
+      <ng-template #productList>
+        <div *ngFor="let product of productListByCat">
+          <app-single-product [productItem]="product"></app-single-product>
+        </div>
+      </ng-template>
+
+      <ng-template #noData>
+        <div class="d-flex flex-column noProduct">
+          <h4>Malheureusement pas d'article dans cette categorie</h4>
+          <p>
+            Devenez le premier ambassadeur de la categorie
+            <span>{{ nameCategory.category }}</span> en proposant votre produit
+            et baisser votre empreinte carbone.
+          </p>
+          <a>Proposer un produit</a>
+        </div>
+      </ng-template>
+    </section>
+  </div>
+</article>

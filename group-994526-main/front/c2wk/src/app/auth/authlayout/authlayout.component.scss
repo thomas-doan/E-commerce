@@ -1,0 +1,17 @@
+main {
+  display: flex;
+  flex: 1 0 auto;
+  min-height: 80vh;
+}
+
+.menu {
+  min-width: 20vh;
+}
+
+.container {
+  flex-grow: 10;
+}
+
+footer {
+  min-height: 10vh;
+}

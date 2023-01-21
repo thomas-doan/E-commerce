@@ -1,0 +1,33 @@
+section {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100%;
+}
+
+article {
+  width: 80%;
+  min-height: 30%;
+  border-radius: 5px;
+  border: 1px solid #c4a35a;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+ul:nth-child(1) {
+  font-weight: bold;
+  margin: 1rem 1rem 2rem 1rem;
+}
+
+button {
+  padding: 1rem;
+  border: none;
+  border-radius: 5px;
+  margin: 0.2rem;
+}
+
+button:hover {
+  background-color: #c4a35a;
+  color: white;
+  transition: background-color 0.8s;
+}

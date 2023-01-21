@@ -1,0 +1,47 @@
+<section class="colorbg-3">
+  <article class="colorbg-2">
+    <form name="form" #f="ngForm" (ngSubmit)="f.form.valid && onSubmit()">
+      <div class="group">
+        <label for="email"><fa-icon [icon]="faMailBulk"></fa-icon> Email</label>
+        <input
+          type="text"
+          name="email"
+          id="email"
+          [(ngModel)]="form.email"
+          #email="ngModel"
+          required
+        />
+        <div class="form_error" *ngIf="email.errors && f.submitted">
+          Email is required !
+        </div>
+      </div>
+      <div class="group">
+        <label for="password"
+          ><fa-icon [icon]="faLock"> </fa-icon> Password</label
+        >
+        <input
+          type="password"
+          name="password"
+          id="password"
+          [(ngModel)]="form.password"
+          #password="ngModel"
+          required
+          minlength="4"
+        />
+
+        <div class="form_error" *ngIf="password.errors && f.submitted">
+          <div *ngIf="password.errors['required']">Password is required</div>
+          <div *ngIf="password.errors['minlength']">
+            Password must be at least 4 charracters
+          </div>
+        </div>
+      </div>
+      <div class="group">
+        <button>Login</button>
+      </div>
+    </form>
+  </article>
+  <div class="bg-img">
+    <img src="/assets/rando.jpeg" alt="" />
+  </div>
+</section>

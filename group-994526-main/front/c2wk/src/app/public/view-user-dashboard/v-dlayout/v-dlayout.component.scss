@@ -1,0 +1,19 @@
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h2 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #fff;
+  margin: 2rem;
+}

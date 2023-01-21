@@ -1,0 +1,18 @@
+img {
+  width: 280px;
+  height: 330px;
+  border-radius: 5px;
+    transition: transform 0.5s;
+}
+
+div {
+  padding-bottom: 2rem;
+}
+
+a {
+  cursor: pointer;
+}
+
+img:hover {
+  transform: scale(1.03);
+}

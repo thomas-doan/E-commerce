@@ -1,0 +1,46 @@
+header {
+  width: 100%;
+}
+
+nav {
+  margin-right: 2rem;
+  margin-left: 2rem;
+  padding: 2rem;
+
+  li {
+    cursor: pointer;
+    position: relative;
+  }
+
+  a {
+    cursor: pointer;
+  }
+  a:hover {
+    color: orange;
+  }
+}
+
+li:hover {
+  color: orange;
+}
+
+li::after {
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  height: 2px;
+  width: 0;
+  background: orange;
+  z-index: 10;
+  transition: width 0.5s;
+}
+
+li:hover::after {
+  width: 100%;
+}
+
+.section2 {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}

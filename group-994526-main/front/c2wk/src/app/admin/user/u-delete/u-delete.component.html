@@ -1,0 +1,20 @@
+<section class="colorbg-3">
+  <article>
+    <ul class="d-flex flex-row flex-justify-content-between">
+      <li>Action</li>
+      <li>Pseudo</li>
+      <li>Email</li>
+    </ul>
+
+    <ul
+      *ngFor="let user of userList"
+      class="d-flex flex-row flex-justify-content-between"
+    >
+      <button (click)="onDeleteUser(user.id_user)" class="colorbg-1">
+        <a class="color-lg">SUPPR</a>
+      </button>
+      <li>{{ user.username }}</li>
+      <li>{{ user.email }}</li>
+    </ul>
+  </article>
+</section>

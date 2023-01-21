@@ -1,0 +1,15 @@
+section {
+  width: 2000px;
+
+  padding: 2rem;
+}
+
+.container {
+  overflow-x: scroll;
+
+  width: 80vw;
+}
+article {
+  display: flex;
+  justify-content: center;
+}

@@ -1,0 +1,31 @@
+main {
+  display: flex;
+  flex: 1 0 auto;
+  min-height: 80vh;
+}
+
+.body {
+  display: flex;
+  flex: 1 0 auto;
+  min-height: 80vh;
+}
+
+.menu {
+  min-width: 20vh;
+}
+
+.container {
+  flex-grow: 10;
+}
+
+footer {
+  margin-top: 2rem;
+  min-height: 10vh;
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  flex: 1 0 auto;
+  min-height: 100vh;
+}

@@ -1,0 +1,12 @@
+<div class="d-flex flex-column">
+  <a (click)=redirectionToDetailProduct(productItem.id_product)>
+
+
+  <p><img src="{{ productItem.image }}" alt="" /></p>
+  <p>{{ productItem.name }}</p>
+  <p>En vente le : {{ productItem.createdAt | date : "d/M/yy" }}</p>
+  <p>{{ productItem.price }} €</p>
+  <button>Acheter</button>
+
+   </a>
+</div>
